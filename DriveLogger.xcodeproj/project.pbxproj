@@ -1,0 +1,305 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3532C8C81758D51000129C7E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3532C8C71758D51000129C7E /* UIKit.framework */; };
+		3532C8CA1758D51000129C7E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3532C8C91758D51000129C7E /* Foundation.framework */; };
+		3532C8CC1758D51000129C7E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3532C8CB1758D51000129C7E /* CoreGraphics.framework */; };
+		3532C8D21758D51000129C7E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3532C8D01758D51000129C7E /* InfoPlist.strings */; };
+		3532C8D41758D51000129C7E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3532C8D31758D51000129C7E /* main.m */; };
+		3532C8D81758D51000129C7E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3532C8D71758D51000129C7E /* AppDelegate.m */; };
+		3532C8DA1758D51000129C7E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3532C8D91758D51000129C7E /* Default.png */; };
+		3532C8DC1758D51000129C7E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3532C8DB1758D51000129C7E /* Default@2x.png */; };
+		3532C8DE1758D51000129C7E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3532C8DD1758D51000129C7E /* Default-568h@2x.png */; };
+		3532C8E11758D51000129C7E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3532C8E01758D51000129C7E /* ViewController.m */; };
+		3532C8E41758D51000129C7E /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3532C8E21758D51000129C7E /* ViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3532C8C41758D51000129C7E /* DriveLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DriveLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3532C8C71758D51000129C7E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3532C8C91758D51000129C7E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3532C8CB1758D51000129C7E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3532C8CF1758D51000129C7E /* DriveLogger-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DriveLogger-Info.plist"; sourceTree = "<group>"; };
+		3532C8D11758D51000129C7E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3532C8D31758D51000129C7E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3532C8D51758D51000129C7E /* DriveLogger-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DriveLogger-Prefix.pch"; sourceTree = "<group>"; };
+		3532C8D61758D51000129C7E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3532C8D71758D51000129C7E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3532C8D91758D51000129C7E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		3532C8DB1758D51000129C7E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		3532C8DD1758D51000129C7E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		3532C8DF1758D51000129C7E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3532C8E01758D51000129C7E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3532C8E31758D51000129C7E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3532C8C11758D51000129C7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3532C8C81758D51000129C7E /* UIKit.framework in Frameworks */,
+				3532C8CA1758D51000129C7E /* Foundation.framework in Frameworks */,
+				3532C8CC1758D51000129C7E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3532C8BB1758D50F00129C7E = {
+			isa = PBXGroup;
+			children = (
+				3532C8CD1758D51000129C7E /* DriveLogger */,
+				3532C8C61758D51000129C7E /* Frameworks */,
+				3532C8C51758D51000129C7E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3532C8C51758D51000129C7E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3532C8C41758D51000129C7E /* DriveLogger.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3532C8C61758D51000129C7E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3532C8C71758D51000129C7E /* UIKit.framework */,
+				3532C8C91758D51000129C7E /* Foundation.framework */,
+				3532C8CB1758D51000129C7E /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3532C8CD1758D51000129C7E /* DriveLogger */ = {
+			isa = PBXGroup;
+			children = (
+				3532C8D61758D51000129C7E /* AppDelegate.h */,
+				3532C8D71758D51000129C7E /* AppDelegate.m */,
+				3532C8DF1758D51000129C7E /* ViewController.h */,
+				3532C8E01758D51000129C7E /* ViewController.m */,
+				3532C8E21758D51000129C7E /* ViewController.xib */,
+				3532C8CE1758D51000129C7E /* Supporting Files */,
+			);
+			path = DriveLogger;
+			sourceTree = "<group>";
+		};
+		3532C8CE1758D51000129C7E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3532C8CF1758D51000129C7E /* DriveLogger-Info.plist */,
+				3532C8D01758D51000129C7E /* InfoPlist.strings */,
+				3532C8D31758D51000129C7E /* main.m */,
+				3532C8D51758D51000129C7E /* DriveLogger-Prefix.pch */,
+				3532C8D91758D51000129C7E /* Default.png */,
+				3532C8DB1758D51000129C7E /* Default@2x.png */,
+				3532C8DD1758D51000129C7E /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3532C8C31758D51000129C7E /* DriveLogger */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3532C8E71758D51000129C7E /* Build configuration list for PBXNativeTarget "DriveLogger" */;
+			buildPhases = (
+				3532C8C01758D51000129C7E /* Sources */,
+				3532C8C11758D51000129C7E /* Frameworks */,
+				3532C8C21758D51000129C7E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DriveLogger;
+			productName = DriveLogger;
+			productReference = 3532C8C41758D51000129C7E /* DriveLogger.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3532C8BC1758D50F00129C7E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Ian Sheret";
+			};
+			buildConfigurationList = 3532C8BF1758D50F00129C7E /* Build configuration list for PBXProject "DriveLogger" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3532C8BB1758D50F00129C7E;
+			productRefGroup = 3532C8C51758D51000129C7E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3532C8C31758D51000129C7E /* DriveLogger */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3532C8C21758D51000129C7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3532C8D21758D51000129C7E /* InfoPlist.strings in Resources */,
+				3532C8DA1758D51000129C7E /* Default.png in Resources */,
+				3532C8DC1758D51000129C7E /* Default@2x.png in Resources */,
+				3532C8DE1758D51000129C7E /* Default-568h@2x.png in Resources */,
+				3532C8E41758D51000129C7E /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3532C8C01758D51000129C7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3532C8D41758D51000129C7E /* main.m in Sources */,
+				3532C8D81758D51000129C7E /* AppDelegate.m in Sources */,
+				3532C8E11758D51000129C7E /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3532C8D01758D51000129C7E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3532C8D11758D51000129C7E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3532C8E21758D51000129C7E /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3532C8E31758D51000129C7E /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3532C8E51758D51000129C7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3532C8E61758D51000129C7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3532C8E81758D51000129C7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DriveLogger/DriveLogger-Prefix.pch";
+				INFOPLIST_FILE = "DriveLogger/DriveLogger-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3532C8E91758D51000129C7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DriveLogger/DriveLogger-Prefix.pch";
+				INFOPLIST_FILE = "DriveLogger/DriveLogger-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3532C8BF1758D50F00129C7E /* Build configuration list for PBXProject "DriveLogger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3532C8E51758D51000129C7E /* Debug */,
+				3532C8E61758D51000129C7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3532C8E71758D51000129C7E /* Build configuration list for PBXNativeTarget "DriveLogger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3532C8E81758D51000129C7E /* Debug */,
+				3532C8E91758D51000129C7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3532C8BC1758D50F00129C7E /* Project object */;
+}
