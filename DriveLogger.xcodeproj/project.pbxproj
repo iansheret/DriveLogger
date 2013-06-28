@@ -18,6 +18,8 @@
 		3532C8DE1758D51000129C7E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3532C8DD1758D51000129C7E /* Default-568h@2x.png */; };
 		3532C8E11758D51000129C7E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3532C8E01758D51000129C7E /* ViewController.m */; };
 		3532C8E41758D51000129C7E /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3532C8E21758D51000129C7E /* ViewController.xib */; };
+		3532C8EB1758EE7100129C7E /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3532C8EA1758EE7100129C7E /* CoreMotion.framework */; };
+		356B8F2B17687DF500A4C051 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 356B8F2A17687DF500A4C051 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		3532C8DF1758D51000129C7E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		3532C8E01758D51000129C7E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3532C8E31758D51000129C7E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		3532C8EA1758EE7100129C7E /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		356B8F2A17687DF500A4C051 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +48,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				356B8F2B17687DF500A4C051 /* CoreLocation.framework in Frameworks */,
+				3532C8EB1758EE7100129C7E /* CoreMotion.framework in Frameworks */,
 				3532C8C81758D51000129C7E /* UIKit.framework in Frameworks */,
 				3532C8CA1758D51000129C7E /* Foundation.framework in Frameworks */,
 				3532C8CC1758D51000129C7E /* CoreGraphics.framework in Frameworks */,
@@ -73,6 +79,8 @@
 		3532C8C61758D51000129C7E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				356B8F2A17687DF500A4C051 /* CoreLocation.framework */,
+				3532C8EA1758EE7100129C7E /* CoreMotion.framework */,
 				3532C8C71758D51000129C7E /* UIKit.framework */,
 				3532C8C91758D51000129C7E /* Foundation.framework */,
 				3532C8CB1758D51000129C7E /* CoreGraphics.framework */,
@@ -260,10 +268,14 @@
 		3532C8E81758D51000129C7E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Polymath Insight Limited";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Polymath Insight Limited";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DriveLogger/DriveLogger-Prefix.pch";
 				INFOPLIST_FILE = "DriveLogger/DriveLogger-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "384F0CFC-7399-4674-BBEE-5A0B45B2F1B4";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "384F0CFC-7399-4674-BBEE-5A0B45B2F1B4";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -271,10 +283,14 @@
 		3532C8E91758D51000129C7E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Polymath Insight Limited";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Polymath Insight Limited";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DriveLogger/DriveLogger-Prefix.pch";
 				INFOPLIST_FILE = "DriveLogger/DriveLogger-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "384F0CFC-7399-4674-BBEE-5A0B45B2F1B4";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "384F0CFC-7399-4674-BBEE-5A0B45B2F1B4";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -298,6 +314,7 @@
 				3532C8E91758D51000129C7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

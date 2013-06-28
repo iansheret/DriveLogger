@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreMotion/CoreMotion.h>
+#import <CoreLocation/CoreLocation.h>
 
 @class ViewController;
 
@@ -15,5 +17,9 @@
 @property (strong, nonatomic) UIWindow *window;
 
 @property (strong, nonatomic) ViewController *viewController;
+
+@property (strong, nonatomic, readonly) CMMotionManager *sharedMotionManager;
+
+@property (strong, nonatomic, readonly) CLLocationManager *sharedLocationManager;
 
 @end

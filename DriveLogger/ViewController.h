@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface ViewController : UIViewController
+#define UPDATE_INTERVAL 0.01
+
+@interface ViewController : UIViewController <CLLocationManagerDelegate>
+
+@property (nonatomic, weak) IBOutlet UIButton *button;
+
+- (IBAction)buttonPressed:(id)sender;
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations;
 
 @end

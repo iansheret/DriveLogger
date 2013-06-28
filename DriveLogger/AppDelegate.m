@@ -10,7 +10,32 @@
 
 #import "ViewController.h"
 
+@interface AppDelegate ()
+{
+    CMMotionManager *motionManager;
+    CLLocationManager *locationManager;
+}
+@end
+
 @implementation AppDelegate
+
+- (CMMotionManager *)sharedMotionManager
+{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        motionManager = [[CMMotionManager alloc] init];
+    });
+    return motionManager;
+}
+
+- (CLLocationManager *)sharedLocationManager
+{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        locationManager = [[CLLocationManager alloc] init];
+    });
+    return locationManager;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -19,6 +44,7 @@
     self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    [UIApplication sharedApplication].idleTimerDisabled = YES;
     return YES;
 }
 
