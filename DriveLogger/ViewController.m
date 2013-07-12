@@ -20,6 +20,10 @@
     
     // Handle for the log file
   	NSFileHandle *_myHandle;
+    NSString *_mostRecentFilename;
+    NSString *_mostRecentFullFilename;
+    
+
 }
 
 - (void)startLogging;
@@ -87,10 +91,12 @@
     [dateFormatter setDateFormat:@"yyyy-MM-dd_HH-mm-ss"];
     NSString* dateString = [dateFormatter stringFromDate:dateNow];
 	NSString *myFilename = [myPath stringByAppendingPathComponent:dateString];
-    NSString *content    = @"";
+    NSString *content    = @"UUID will go here\n";
 	[content writeToFile:myFilename atomically:NO encoding:NSStringEncodingConversionAllowLossy error:nil];
 	_myHandle = [NSFileHandle fileHandleForUpdatingAtPath:myFilename];
     _fileOpen = true;
+    _mostRecentFullFilename = myFilename;
+    _mostRecentFilename = dateString;
     
     // Start motion updates
     CMMotionManager *motionManager = [(AppDelegate *)[[UIApplication sharedApplication] delegate] sharedMotionManager];
@@ -173,6 +179,9 @@
     _fileOpen = false;
     [_myHandle closeFile];
     NSLog(@"Closed the file");
+    
+    // Upload the file to the server
+    [self uploadFile];
 
 }
 
@@ -196,6 +205,51 @@
         }
     }
 
+}
+
+- (void)uploadFile {
+ 
+    // create request
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    [request setCachePolicy:NSURLRequestReloadIgnoringLocalCacheData];
+    [request setHTTPShouldHandleCookies:NO];
+    [request setTimeoutInterval:30];
+    [request setHTTPMethod:@"POST"];
+    
+    // set Content-Type in HTTP header
+    NSString *boundary = @"sfd7bi7e74774tf67fgysw6b6w3cbyg6w3bc3gyeg36sb";
+    NSString *contentType = [NSString stringWithFormat:@"multipart/form-data; boundary=%@", boundary];
+    [request setValue:contentType forHTTPHeaderField: @"Content-Type"];
+    
+    // post body
+    NSMutableData *body = [NSMutableData data];
+    
+    // add params (all params are strings)
+    [body appendData:[[NSString stringWithFormat:@"--%@\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"%@\"\r\n\r\n", @"token"] dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[[NSString stringWithFormat:@"%@\r\n", @"r7vilxaq0qwd900wzycy"] dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[[NSString stringWithFormat:@"--%@\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"%@\"; filename=\"%@\"\r\n", @"file", _mostRecentFilename] dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[[NSString stringWithFormat:@"Content-Type: text/plain\r\n\r\n"] dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[NSData dataWithContentsOfFile:_mostRecentFullFilename]];
+    [body appendData:[[NSString stringWithFormat:@"\r\n"] dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[[NSString stringWithFormat:@"--%@--\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+
+    // setting the body of the post to the reqeust
+    [request setHTTPBody:body];
+    
+    // set the content-length
+    NSString *postLength = [NSString stringWithFormat:@"%d", [body length]];
+    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+    
+    // set URL
+    [request setURL:[NSURL URLWithString:@"http://localhost:8080/filelogger/upload"]];
+    
+    //return and test
+    NSData *returnData = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+    NSString *returnString = [[NSString alloc] initWithData:returnData encoding:NSUTF8StringEncoding];
+    NSLog(@"%@", returnString);
+    
 }
 
 @end
